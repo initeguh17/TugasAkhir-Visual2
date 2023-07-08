@@ -2,7 +2,7 @@ object siswa: Tsiswa
   Left = 192
   Top = 158
   Width = 1044
-  Height = 622
+  Height = 589
   Caption = 'Siswa'
   Color = clActiveCaption
   Font.Charset = DEFAULT_CHARSET
@@ -448,13 +448,6 @@ object siswa: Tsiswa
     ParentFont = False
     TabOrder = 18
   end
-  object strngrd1: TStringGrid
-    Left = 24
-    Top = 336
-    Width = 753
-    Height = 129
-    TabOrder = 19
-  end
   object btn6: TButton
     Left = 24
     Top = 480
@@ -467,6 +460,84 @@ object siswa: Tsiswa
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    TabOrder = 19
+  end
+  object dbgrd1: TDBGrid
+    Left = 24
+    Top = 328
+    Width = 753
+    Height = 145
+    DataSource = ds1
     TabOrder = 20
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'sd99bjm'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'D:\Kuliah\TUGAS\Semester 4\Visual\TA S4\libmysql.dll'
+    Left = 800
+    Top = 352
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from siswa')
+    Params = <>
+    Left = 840
+    Top = 352
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 880
+    Top = 352
+  end
+  object frxdbdtst1: TfrxDBDataset
+    UserName = 'frxdbdtst1'
+    CloseDataSource = False
+    Left = 808
+    Top = 400
+  end
+  object frxrprt1: TfrxReport
+    Version = '4.0.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 45113.904357662040000000
+    ReportOptions.LastChange = 45113.905261990740000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    Left = 864
+    Top = 400
+    Datasets = <>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      Orientation = poLandscape
+      PaperWidth = 297.000000000000000000
+      PaperHeight = 210.000000000000000000
+      PaperSize = 9
+    end
   end
 end

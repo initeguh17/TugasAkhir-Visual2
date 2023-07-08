@@ -4,7 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Grids;
+  Dialogs, StdCtrls, ExtCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, frxClass,
+  frxDBSet;
 
 type
   Tsiswa = class(TForm)
@@ -41,8 +43,13 @@ type
     btn4: TButton;
     btn5: TButton;
     cbb1: TComboBox;
-    strngrd1: TStringGrid;
     btn6: TButton;
+    con1: TZConnection;
+    zqry1: TZQuery;
+    ds1: TDataSource;
+    dbgrd1: TDBGrid;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
   private
     { Private declarations }
   public

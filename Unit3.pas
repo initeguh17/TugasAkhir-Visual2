@@ -4,7 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, Grids;
+  Dialogs, StdCtrls, ExtCtrls, Grids, DB, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, DBGrids,
+  frxClass, frxDBSet;
 
 type
   Twalikelas = class(TForm)
@@ -32,7 +34,12 @@ type
     btn4: TButton;
     btn5: TButton;
     btn6: TButton;
-    strngrd1: TStringGrid;
+    dbgrd1: TDBGrid;
+    con1: TZConnection;
+    zqry1: TZQuery;
+    ds1: TDataSource;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
   private
     { Private declarations }
   public
