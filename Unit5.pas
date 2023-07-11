@@ -40,6 +40,16 @@ type
     ds1: TDataSource;
     frxdbdtst1: TfrxDBDataset;
     frxrprt1: TfrxReport;
+    zqry1id: TIntegerField;
+    zqry1siswa_id: TIntegerField;
+    zqry1poin_id: TIntegerField;
+    zqry1walikelas_id: TIntegerField;
+    zqry1ortu_id: TIntegerField;
+    zqry1kelas_id: TIntegerField;
+    zqry1tanggal: TStringField;
+    zqry1semester: TStringField;
+    zqry1status: TStringField;
+    zqry1tinggat_kelas: TStringField;
     procedure posisiawal;
     procedure bersih;
     procedure FormShow(Sender: TObject);
@@ -49,6 +59,7 @@ type
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -247,6 +258,11 @@ btn2.Enabled:= False;
 btn3.Enabled:= True;
 btn4.Enabled:= True;
 btn5.Enabled:= True;
+end;
+
+procedure Tsemester.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.

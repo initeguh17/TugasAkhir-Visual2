@@ -43,6 +43,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,7 +60,7 @@ implementation
 
 procedure Tuser.posisiawal;
 begin
-  bersih;
+bersih;
 btn1.Enabled:= True;
 btn2.Enabled:= False;
 btn3.Enabled:= False;
@@ -196,6 +197,11 @@ btn2.Enabled:= False;
 btn3.Enabled:= True;
 btn4.Enabled:= True;
 btn5.Enabled:= True;
+end;
+
+procedure Tuser.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.
